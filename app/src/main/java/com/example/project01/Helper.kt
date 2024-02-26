@@ -3,8 +3,6 @@ package com.example.project01
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import com.google.android.gms.location.FusedLocationProviderClient
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -17,8 +15,6 @@ import java.io.IOException
 
 class Helper {
     companion object {
-        private const val PERMISSION_REQUEST_CODE = 100 // Define your request code
-        private lateinit var fusedLocationClient: FusedLocationProviderClient
         private val client = OkHttpClient()
         private const val url = "https://api.open-meteo.com/v1/forecast"
 
@@ -30,7 +26,7 @@ class Helper {
 
             client.newCall(request).enqueue(object : Callback {
                 override fun onFailure(call: Call, e: IOException) {
-                    showToast(context, "Network connection is needed")
+                    showToast(context, "Network connection is needed ")
                 }
 
                 override fun onResponse(call: Call, response: Response) {
