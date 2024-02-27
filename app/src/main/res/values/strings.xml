@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Project01</string>
+    <string name="app_name">Weather Info</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="api_key">AIzaSyDocjo0eh7DtbRLGWD4ksIw4y-joqr-t94</string>
 </resources>
